@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #DDFDD3;
+}
+
+/* Hero */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 30, 25, 0.8),
+            rgba(57, 73, 55, 0.6)), url(images/farm.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 9.375rem;
+}
+
+.nav_link {
+    flex: 1;
+    text-align: right;
+}
+
+.nav_link ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.5rem 0.625rem;
+    position: relative;
+}
+
+.nav_link ul li a {
+    text-decoration: none;
+    color: #F0FF42;
+    font-size: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav_link ul li::after {
+    content: '';
+    width: 0%;
+    height: 0.125rem;
+    display: flex;
+    background: #379237;
+
+}
+
+.nav_link ul li:hover::after {
+    width: 100%;
+}
+
+.page_heading {
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.page_heading h1 {
+    font-size: 4.810rem;
+    font-family: 'Ephesis', cursive;
+
+}
+
+.page_heading p {
+    font-size: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+    margin: 0.75rem 0 2.8rem;
+}
+
+.discover_more {
+    display: inline-block;
+    padding: 1.25rem 1.125rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    position: relative;
+    cursor: pointer;
+    background-color: #F0FF42;
+    border-radius: 0.438rem;
+}
+
+.discover_more a {
+    text-decoration: none;
+    color: rgb(89, 90, 79);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bolder;
+}
+
+.discover_more:hover {
+    background-color: #54B435;
+    transition: 1s;
+}
+
+
+/* custom vertical scrollbar */
+::-webkit-scrollbar {
+    width: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F0FF42;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#54B435, #F0FF42);
+
+}
+
+nav .fa {
+    display: none;
+}
+
+/* media queries */
+@media(max-width: 700px) {
+    .nav_link ul li {
+        display: block;
+
+    }
+
+    .page_heading h1 {
+        font-size: 2.405rem;
+
+    }
+
+    .nav_link {
+        background-color: #F0FF42;
+        opacity: 0.9;
+        height: 100vh;
+        position: absolute;
+        width: 12.5rem;
+        top: 0;
+        right: -12.5rem;
+        text-align: left;
+        z-index: 3;
+        transition: ease-in .5s;
+
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.85rem;
+        margin: .8rem;
+    }
+
+    .nav_link ul {
+        padding: 1.875rem;
+
+    }
+
+    .nav_link ul li a {
+        color: rgb(89, 90, 79);
+    }
+}
+
+/* Products */
+.products {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 6.25rem;
+    color: #051401;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 2.625rem;
+    font-weight: bold;
+
+}
+
+.products .row {
+    margin-top: 4.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-col {
+    flex-basis: 30%;
+    margin-bottom: 1.85rem;
+    position: relative;
+
+}
+
+.product-col img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    display: block;
+
+}
+
+.product-col h3 {
+    text-align: center;
+    font-weight: 900;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    color:white;
+    transform: translateX(-50%);
+    transition: 0.8s;
+    opacity: 0;
+    font-family: 'Oswald', sans-serif;
+   
+}
+.product-col:hover h3 {
+    opacity: 1;
+    bottom: 49%;
+}
+
+
+.product-col p {
+    margin-top: .8rem;
+}
+
+
+.product-col .layer {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.5rem;
+    transition: 1s;
+}
+
+
+.product-col .layer:hover {
+    backdrop-filter: blur(0.5px);
+    background: #051401;
+    opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media(max-width:700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* farm */
+.farm {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2.25rem;
+    color: #051401;
+    font-family: 'Oswald', sans-serif;
+}
+
+.farm .row{
+     margin-top: 4.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.farm-col{
+    flex-basis: 38%;
+    text-align: left;
+    margin-bottom: 5%;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+}
+.farm-col h2{
+    font-size: 2.5rem;
+}
+.farm-col p{
+    padding-top: .8rem;
+}
+.farm-col img{
+   width: 100%;
+   border-radius: 70%;
+   padding-left: 12rem;
+}
+
+/* media */
+@media(max-width:700px){
+    .farm {
+        padding-top: 0.1rem;
+    }
+    .farm-col h2{
+        font-size: 1.2rem;
+    }
+    .farm-col img{
+        padding-left: 0;
+        border-radius: 70%;
+       
+     }
+}
+
+/* testimonials */
+.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2.25rem;
+    color: #051401;
+    font-family: 'Oswald', sans-serif;
+}
+.testimonials .row{
+    margin-top: 4.25rem;
+    display: flex;
+    justify-content: space-between;
+}
+.testimonial-col{
+    flex-basis: 45%;
+    text-align: left;
+    padding: 1.5rem;
+    margin-bottom: 5%;
+    border-radius: 1.6rem;
+    background-color:#379237;
+    display: flex;
+    cursor: pointer;
+}
+.testimonial-col img{
+   height: 4rem;
+   width:  4rem;
+  margin-left: .7rem;
+  margin-right: 1.2rem;
+   border-radius: 50%;
+   margin-bottom: .7rem;
+}
+.testimonial-col p{
+    padding: 0;
+}
+.testimonial-col h3{
+   margin-top:1rem ;
+   text-align: left;
+}
+.testimonial-col .fa-star{
+    color:#F0FF42;
+}
+
+/* media */
+@media(max-width:700px){
+    .testimonials h1{
+        font-size: 1.6rem;
+    }
+  
+}
+
+/* contact */
+.contact{
+  
+    margin:  2rem auto;
+    width: 80%;
+    text-align: center;
+    background:linear-gradient(rgba(4, 30, 25, 0.8),
+    rgba(57, 73, 55, 0.6)),url(images/bn.jpg);
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    background-size: cover;
+    background-position: center;
+    padding: 4rem;
+ 
+    border-radius: .9rem;
+}
+.contact p{
+    margin-bottom: 2rem;
+}
